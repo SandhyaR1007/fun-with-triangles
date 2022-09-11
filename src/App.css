@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
+:root {
+  --primary-color: #3867d6;
+  --text-color: #fff;
+  --gray-text-color: rgb(56, 56, 56);
+}
+/* general */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* navbar style */
+.navbar {
+  padding: 0rem 1.5rem;
+  padding-top: 0.3rem;
+  /* background-color: #1aaa5d; */
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.nav-header {
+  margin: 0;
+  padding-top: 0.3rem;
+  font-size: 1.8rem;
+  font-family: "Megrim", cursive;
+}
+.nav-list {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+}
+.nav-list-items {
+  padding: 0rem 0.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.nav-list-items:hover {
+  background-color: rgba(248, 248, 248, 0.4);
+  border-radius: 0.3rem;
+  color: #000;
+}
+
+/* isTriangle */
+.angles-container {
+  text-align: center;
+  display: inline-block;
+}
+.angle-label {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin: 0.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.angle {
+  width: 230px;
+  display: block;
+  margin: 1rem 0rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+}
+.angle:focus {
+  outline: none;
+}
+.result {
+  margin: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.btn-istriangle {
+  background-color: #3867d6;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0.5rem 0rem;
+}
+
+.questions {
+  padding-bottom: 1.2rem;
+}
+.options-div label {
+  font-size: 0.9rem !important;
+  color: var(--gray-text-color);
+  margin-right: 0.2rem;
+}
+.options-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
