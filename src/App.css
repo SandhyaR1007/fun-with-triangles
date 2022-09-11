@@ -14,7 +14,7 @@
 .navbar {
   padding: 0rem 1.5rem;
   padding-top: 0.3rem;
-  /* background-color: #1aaa5d; */
+
   background-color: var(--primary-color);
   color: var(--text-color);
 }
@@ -73,7 +73,7 @@
   font-weight: bold;
 }
 .btn-istriangle {
-  background-color: #3867d6;
+  background-color: var(--primary-color);
   color: var(--text-color);
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -85,6 +85,7 @@
 
 .questions {
   padding-bottom: 1.2rem;
+  font-size: 1.1rem;
 }
 .options-div label {
   font-size: 0.9rem !important;
