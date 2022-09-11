@@ -6,10 +6,10 @@ const IsTriangle = () => {
   const [angle2, setAngle2] = useState("");
   const [angle3, setAngle3] = useState("");
   const [result, setResult] = useState("");
-  const calculate = (e) => {
+  const isTriangle = (e) => {
     e.preventDefault();
     console.log("called");
-    let sum = parseInt(angle1) + parseInt(angle2) + parseInt(angle3);
+    let sum = Number(angle1) + Number(angle2) + Number(angle3);
     console.log(sum);
     if (sum == 180) {
       setResult("Yayy!! the angles form a triangle");
@@ -17,10 +17,11 @@ const IsTriangle = () => {
       setResult("Ahh!! the angles don't form a triangle");
     }
   };
+
   return (
     <div className="container">
       <h2>Angles of Triangles</h2>
-      <form onSubmit={(e) => calculate(e)} className="angles-container">
+      <form onSubmit={(e) => isTriangle(e)} className="angles-container">
         <label className="angle-label">
           Angle 1
           <input

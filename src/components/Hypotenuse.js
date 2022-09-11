@@ -5,21 +5,28 @@ const Hypotenuse = () => {
   const [height, setHeight] = useState("");
 
   const [result, setResult] = useState("");
-  const calculate = (e) => {
+  const calculateHypotenuse = (e) => {
     e.preventDefault();
-    console.log("called");
 
-    let baseSquare = parseInt(base) * parseInt(base);
-    let heightSquare = parseInt(height) * parseInt(height);
-    console.log(baseSquare, heightSquare);
-    let hypotenuse = Math.sqrt(baseSquare + heightSquare);
-    console.log(hypotenuse);
-    setResult(`The length of hypotenuse is ${hypotenuse}`);
+    if (base !== "" && height !== "") {
+      let baseSquare = Number(base) * Number(base);
+      let heightSquare = Number(height) * Number(height);
+
+      let hypotenuse = Math.sqrt(baseSquare + heightSquare);
+
+      setResult(`The length of hypotenuse is ${hypotenuse}`);
+    } else {
+      setResult(`Please fill both base and height`);
+    }
   };
+
   return (
     <div className="container">
       <h2>Calculate Hypotenuse of a triangle</h2>
-      <form onSubmit={(e) => calculate(e)} className="angles-container">
+      <form
+        onSubmit={(e) => calculateHypotenuse(e)}
+        className="angles-container"
+      >
         <label className="angle-label">
           Enter base value (b) =
           <input
