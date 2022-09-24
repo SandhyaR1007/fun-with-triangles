@@ -29,7 +29,7 @@ const IsTriangle = () => {
             type="number"
             value={angle1}
             onChange={(e) => setAngle1(e.target.value)}
-            min="0"
+            min="1"
           />
         </label>
         <label className="angle-label">
@@ -38,7 +38,7 @@ const IsTriangle = () => {
             className="angle"
             type="number"
             value={angle2}
-            min="0"
+            min="1"
             onChange={(e) => setAngle2(e.target.value)}
           />
         </label>
@@ -48,7 +48,7 @@ const IsTriangle = () => {
             className="angle"
             type="number"
             value={angle3}
-            min="0"
+            min="1"
             onChange={(e) => setAngle3(e.target.value)}
           />
         </label>
