@@ -9,17 +9,20 @@ const Hypotenuse = () => {
     e.preventDefault();
 
     if (base !== "" && height !== "") {
-      let baseSquare = Number(base) * Number(base);
-      let heightSquare = Number(height) * Number(height);
-
-      let hypotenuse = Math.sqrt(baseSquare + heightSquare);
+      let sum = sumOfSquares(base, height);
+      let hypotenuse = Math.sqrt(sum);
 
       setResult(`The length of hypotenuse is ${hypotenuse}`);
     } else {
       setResult(`Please fill both base and height`);
     }
   };
-
+  const sumOfSquares = (base, height) => {
+    let baseSquare = Number(base) * Number(base);
+    let heightSquare = Number(height) * Number(height);
+    let sum = baseSquare + heightSquare;
+    return sum;
+  };
   return (
     <div className="container">
       <h2>Calculate Hypotenuse of a triangle</h2>
