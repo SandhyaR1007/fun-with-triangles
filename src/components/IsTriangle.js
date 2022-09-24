@@ -9,12 +9,16 @@ const IsTriangle = () => {
   const isTriangle = (e) => {
     e.preventDefault();
     console.log("called");
-    let sum = Number(angle1) + Number(angle2) + Number(angle3);
-    console.log(sum);
-    if (sum == 180) {
-      setResult("Yayy!! the angles form a triangle");
+    if (angle1 == "" || angle2 == "" || angle3 == "") {
+      setResult("Please provide all the three angles");
     } else {
-      setResult("Ahh!! the angles don't form a triangle");
+      let sum = Number(angle1) + Number(angle2) + Number(angle3);
+      console.log(sum);
+      if (sum == 180) {
+        setResult("Yayy!! the angles form a triangle");
+      } else {
+        setResult("Ahh!! the angles don't form a triangle");
+      }
     }
   };
 
